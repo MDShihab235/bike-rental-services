@@ -1,0 +1,111 @@
+
+.productCard2 {
+    width: 100%;
+    max-width: 50rem;
+    padding: 2rem;
+    background-color: #dbf4ff21;
+    box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    /* align-items: center; */
+    border-radius: .8rem;
+    margin: 5px;
+    height: 60vh;
+    overflow: hidden;
+    
+}
+
+.productCard2_img {
+    min-width: 15rem;
+    max-width: 15rem;
+    height: 15rem;
+    /* transform: translateX(-8rem); */
+    position: relative;
+}
+
+.productCard2_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .8rem;
+    display: block;
+}
+
+.productCard2_img img::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: .5rem .5rem 3rem 1px rgba(0, 0, 0, 0.5);
+    border-radius: .8rem;
+}
+
+.productCard2_info{
+    padding-left: 35px;
+}
+
+.productCard2_title {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 2rem;
+    text-decoration: none !important;
+    color: #02b875;
+  
+}
+
+.productCard2_text {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000000b3;
+    text-decoration: none;
+}
+
+.productCard2_btn {
+    display: inline-block;
+    padding: .5rem 2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: .9rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: .5rem;
+    background: linear-gradient(to right, #c945cf 0%, #04a6bd 100%);
+   
+}
+
+.productCard2_btn:hover {
+    background: linear-gradient(to right, #04a6bd 0%, #c945cf 100%);
+}
+
+@media screen and (max-width: 1068px) {
+    .productCard2 {
+        max-width: 80rem;
+    }
+    .productCard2_img {
+        min-width: 30rem;
+        max-width: 30rem;
+    }
+   
+}
+
+@media screen and (max-width: 868px) {
+    .productCard2_btn {
+        max-width: 70rem;
+    }
+   
+}
+
+@media screen and (max-width: 768px) {
+    .productCard2_btn {
+        padding: 2.5rem;
+        flex-direction: column;
+    }
+    .productCard2_img {
+        min-width: 100%;
+        max-width: 100%;
+        transform: translate(0, -1rem);
+    }
+   
+}
+

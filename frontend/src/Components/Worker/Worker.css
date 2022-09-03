@@ -1,0 +1,64 @@
+
+
+.worker{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white;
+}
+.worker-card{
+    max-width: 300px;
+    min-height: 250px;
+    padding: 30px;
+    box-sizing: border-box;
+    color: #FFF;
+    margin:20px;
+    box-shadow: 0px 2px 18px -4px rgba(0,0,0,0.75);
+    text-align: center; 
+}
+.worker-card img {
+    border-radius: 50%;
+}
+
+.worker-title{
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    color: rgb(38, 207, 52);
+    margin-top: 10px;
+}
+
+.worker-title2{
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    color: rgb(37, 139, 46);
+    margin-top: 10px;
+}
+.worker-content{
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    color:#02b875;
+    text-align: justify;
+}
+.worker-btn{
+    all: unset;
+    display: block;
+    margin-left: auto;
+    border: 2px solid green;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 10px;
+    font-weight: 600;
+    transition: all 0.5s;
+    cursor: pointer;
+    letter-spacing: 1.2px;
+    color:#02b875;
+}
+.worker-btn:hover{
+   color: white;
+   background: green;
+}

@@ -1,66 +1,96 @@
-import React from 'react';
-import {Button, Carousel} from 'react-bootstrap'
-import img1 from '../../image/picture-1.jpg'
-import img2 from '../../image/picture-2.jpg'
-import img4 from '../../image/picture-4.jpg'
-import './Slider.css'
+/* This example requires Tailwind CSS v2.0+ */
+export default function Slider() {
+  return (
+    <div className="relative overflow-hidden bg-white">
+      <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
+        <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+          <div className="sm:max-w-lg">
+            <h1 className="font text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Summer styles are finally here
+            </h1>
+            <p className="mt-4 text-xl text-gray-500">
+              This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
+              if you live or die.
+            </p>
+          </div>
+          <div>
+            <div className="mt-10">
+              {/* Decorative image grid */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl"
+              >
+                <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+                  <div className="flex items-center space-x-6 lg:space-x-8">
+                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                        <img
+                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                      <div className="h-64 w-44 overflow-hidden rounded-lg">
+                        <img
+                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                    </div>
+                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div className="h-64 w-44 overflow-hidden rounded-lg">
+                        <img
+                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                      <div className="h-64 w-44 overflow-hidden rounded-lg">
+                        <img
+                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                      <div className="h-64 w-44 overflow-hidden rounded-lg">
+                        <img
+                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                    </div>
+                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div className="h-64 w-44 overflow-hidden rounded-lg">
+                        <img
+                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                      <div className="h-64 w-44 overflow-hidden rounded-lg">
+                        <img
+                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-const Slider = () => {
-        
-    return (
-      <div >
-  
-      <Carousel fade interval={3000} className="carousel">
-  <Carousel.Item >
-    <img
-   
-      src={img1}
-      alt="First slide"
-    />
-    <Carousel.Caption>
-
-     <div className="carousel-caption-1">
-     <h1>Home &amp; Business  Waste Pickup  Solution</h1>
-      <p>Over be that spoken the bore lost. As some no shadows feather core. Little and shadows till dreary more of nevermore, gently thy lenore soul felt and i and take.</p>
-      <button>Learn More</button>
-     </div>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-    
-      src={img2}
-      alt="Second slide"
-    />
-
-    <Carousel.Caption>
-    <div className="carousel-caption-2">
-    <h1>Your Clutter Is &amp; Our Bread  Butter </h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga molestias dolores ipsam laudantium temporibus a libero explicabo, quibusdam harum iure.</p>
-      <button>Learn More</button>
+              <a
+                href="#"
+                className="inline-block rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-center font-medium text-white hover:bg-indigo-700"
+              >
+                Shop Collection
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-         
-      src={img4}
-      alt="Third slide"
-    />
-
-    <Carousel.Caption>
-   <div  className="carousel-caption-1">
-      <h1 >We Are The Leader <br/> In Cleaning Company</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam corrupti impedit commodi tempora obcaecati quo sequi, vitae qui placeat natus.</p>
-      <button>Learn More</button>
-      
-   </div>
-    </Carousel.Caption>
-  </Carousel.Item>
-</Carousel>    
-</div>
-    );
-  }
-  
-export default  Slider;
+  )
+}

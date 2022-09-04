@@ -1,15 +1,16 @@
 const express = require("express");
 const {
-  getAllproducts,
+  getAllServices,
   createproduct,
-  updateproduct,
-  deleteproduct,
-  getproductDetails,
+  updateService,
+  deleteService,
+  getServiceDetails,
   createReview,
-  getproductReviews,
+  getServiceReviews,
   deleteReview,
-  getAdminproducts,
-  createBlog
+  getAdminServices,
+  createBlog,
+  createService
  
 } = require("../controllers/productControler");
 const { isAuthenticatedUser, authorizeRoles } = require("../midleware/auth");
@@ -17,22 +18,22 @@ const { isAuthenticatedUser, authorizeRoles } = require("../midleware/auth");
 const router = express.Router();
 
 // router.route("/product/new").post(isAuthenticatedUser,authorizeRoles("admin"), createproduct);
-router.route("/products").get(getAllproducts);
+router.route("/products").get(getAllServices);
 router
   .route("/admin/product/:id")
-  .put(isAuthenticatedUser, authorizeRoles("admin"), updateproduct);
-router
-  .route("/product/:id")
-  .delete(isAuthenticatedUser, authorizeRoles("admin"), deleteproduct);
-router.route("/product/:id").get(getproductDetails);
+  .put(isAuthenticatedUser, authorizeRoles("admin"), updateService);
+// router
+//   .route("/product/:id")
+//   .delete(isAuthenticatedUser, authorizeRoles("admin"), deleteproduct);
+router.route("/product/:id").get(getServiceDetails);
 router.route("/review").put(isAuthenticatedUser, createReview);
 router
   .route("/reviews")
-  .get(getproductReviews)
+  .get(getServiceReviews)
   .delete(isAuthenticatedUser, deleteReview);
 router
   .route("/admin/products")
-  .get(isAuthenticatedUser, authorizeRoles("admin"), getAdminproducts);
+  .get(isAuthenticatedUser, authorizeRoles("admin"),  getAdminServices);
 
   // router
   // .route("/subadmin/products")
@@ -40,11 +41,11 @@ router
 
 router
 .route("/admin/product/new")
-  .post(isAuthenticatedUser, authorizeRoles("admin"), createproduct);
+  .post(isAuthenticatedUser, authorizeRoles("admin"),createService);
 
  
 
 router
   .route("/admin/product/:id")
-  .delete(isAuthenticatedUser, authorizeRoles("admin"), deleteproduct);
+  .delete(isAuthenticatedUser, authorizeRoles("admin"), deleteService);
 module.exports = router;

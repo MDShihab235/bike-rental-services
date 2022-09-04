@@ -5,7 +5,7 @@ const Features = require("../utils/features");
 const cloudinary = require("cloudinary");
 
 // Create Service -- Admin
-exports.createproduct = catchAsyncError(async (req, res, next) => {
+exports.createService = catchAsyncError(async (req, res, next) => {
   let images = [];
 
   if (typeof req.body.images === "string") {
@@ -41,7 +41,7 @@ exports.createproduct = catchAsyncError(async (req, res, next) => {
 
 // Delete product
 
-exports.deleteproduct = catchAsyncError(async (req, res, next) => {
+exports.deleteService = catchAsyncError(async (req, res, next) => {
   const service = await Service.findById(req.params.id);
 
   if (!service) {
@@ -62,7 +62,7 @@ exports.deleteproduct = catchAsyncError(async (req, res, next) => {
 });
 
 //get all product
-exports.getAllproducts = catchAsyncError(async (req, res, next) => {
+exports.getAllServices = catchAsyncError(async (req, res, next) => {
   // return next(new ErrorHandler("This is testing error",500))
   const resultPerPage = 4;
   const productCount = await Service.countDocuments();
@@ -87,7 +87,7 @@ exports.getAllproducts = catchAsyncError(async (req, res, next) => {
 });
 
 //get single product details
-exports.getproductDetails = catchAsyncError(async (req, res, next) => {
+exports.getServiceDetails = catchAsyncError(async (req, res, next) => {
   const product1 = await Service.findById(req.params.id);
   
   if (!product1) {
@@ -101,7 +101,7 @@ exports.getproductDetails = catchAsyncError(async (req, res, next) => {
 });
 
 //update product(Admin)
-exports.updateproduct = catchAsyncError(async (req, res, next) => {
+exports.updateService = catchAsyncError(async (req, res, next) => {
   let service = await Service.findById(req.params.id);
 
   if (!service) {
@@ -192,7 +192,7 @@ exports.createReview = catchAsyncError(async (req, res, next) => {
 });
 
 // Get All Reviews of a product
-exports.getproductReviews = catchAsyncError(async (req, res, next) => {
+exports.getServiceReviews = catchAsyncError(async (req, res, next) => {
   const review = await Service.findById(req.query.id);
   
   if (!review) {
@@ -256,7 +256,7 @@ console.log(await Service.findById(req.query.productId));
 });
 
 // Get All Service (Admin)
-exports.getAdminproducts = catchAsyncError(async (req, res, next) => {
+exports. getAdminServices = catchAsyncError(async (req, res, next) => {
   const products = await Service.find();
 
   res.status(200).json({

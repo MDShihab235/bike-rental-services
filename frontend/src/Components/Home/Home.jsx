@@ -13,6 +13,9 @@ import Slider from "./Slider";
 import FeatureService from "../FeaturedService/FeaturedService";
 import Worker from "../Worker/Worker";
 import AllBlog from "../AllBlog/AllBlog";
+import HeadLine from "../Header/HeadLine";
+import Navbar from "../Header/Navbar";
+import FeatureSection from "../FeaturedService/FeaturedSection";
 
 
 const Home = () => {
@@ -41,20 +44,23 @@ const Home = () => {
           <MetaData title="WOSTIN" />
  
           <div>
-         <Header/>
+          <HeadLine/>
+         {/* <Header/> */}  
+         <Navbar/>
           </div>
           <div>
          <Slider/>
-         <FeatureService/>
+         <FeatureSection/>
           </div>
 
-          <h2 className="homeHeading">FEATURE SERVICE</h2>
+          <h2 className="homeHeading">FEATURE BIKE SERVICE</h2>
           <div>
-            <div className="products">
-              {products &&
+            <div>
+              {/* {products &&
                 products.map((product) => (
                   <Product key={product._id} product={product} />
-                ))}
+                ))} */}
+                {/* <Product/> */}
             </div>
             <AllReviews />
             <Worker/>
